@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "axios": "^0.27.2"
+  },
+  "name": "agoravai",
+  "version": "1.0.0",
+  "description": "agora vai",
+  "main": "index.js",
+  "type": "module",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
