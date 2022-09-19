@@ -17,7 +17,7 @@ const getEuro = () => {
      axios.get(`${urlBase}/EUR-BRL`)
         .then(res => {
             const data = `${Number(res.data.EURBRL.bid).toFixed(2)}`
-            p.textContent = `EUR | € ${data.replace('.',',')}`
+            p.textContent = `EUR € | R$ ${data.replace('.',',')}`
             // const opt = p
             btn.addEventListener('click', (e) => {
                 e.preventDefault()
@@ -47,7 +47,7 @@ const getDolar = () => {
     axios.get(`${urlBase}/USD-BRL`)
        .then(res => {
            const data = `${Number(res.data.USDBRL.bid).toFixed(2)}`
-           pDo.textContent = `USD | $ ${data.replace('.',',')}`
+           pDo.textContent = `USD $ | R$ ${data.replace('.',',')}`
            console.log(data)
            // const opt = p
            btn.addEventListener('click', (e) => {
