@@ -2,9 +2,11 @@ const urlBase = "http://economia.awesomeapi.com.br/json/last"
 
 const btn = document.querySelector('#btnSum')
 const inp = document.querySelector('#input1')
+const inp2 = document.querySelector('#input2')
 const p = document.querySelector('.pEuro')
 const pDo = document.querySelector('.pDolar')
 const sel = document.querySelector('.select1')
+const sel2 = document.querySelector('.select2')
 
 const h2final = document.querySelector('#h2final')
 
@@ -20,9 +22,13 @@ const getEuro = () => {
             btn.addEventListener('click', (e) => {
                 e.preventDefault()
             
-                if (sel.value === 'real') {
+                if (sel.value === 'brl' && sel2.value === 'eur' ) {
+                    const hh = inp.value / data
+                    h2final.innerText = '€'+ hh.toFixed(2).replace('.',',')
+                    // h2final.innerHTML = ''
+                }if (sel.value === 'eur' && sel2.value === 'brl' ) {
                     const hh = inp.value * data
-                    h2final.innerText = 'R$'+ hh
+                    h2final.innerText = 'R$'+ hh.toFixed(2).replace('.',',')
                     // h2final.innerHTML = ''
                 }
             }
@@ -47,12 +53,16 @@ const getDolar = () => {
            btn.addEventListener('click', (e) => {
                e.preventDefault()
           
-               if (sel.value === 'dolar') {
-                   const hh = inp.value * data
-                    console.log(inp.value)
-                   h2final.innerHTML = 'R$'+ hh.toFixed(2)
-                   console.log(h2final)// h2final.innerHTML = ''
-               }
+               if (sel.value === 'brl' && sel2.value === 'usd' ) {
+                const hh = inp.value / data
+                h2final.innerText = '$'+ hh.toFixed(2).replace('.',',')
+                // h2final.innerHTML = ''
+            }if (sel.value === 'usd' && sel2.value === 'brl' ) {
+                const hh = inp.value * data
+                h2final.innerText = 'R$'+ hh.toFixed(2).replace('.',',')
+                // h2final.innerHTML = ''
+            }                
+            
            }
 
            )

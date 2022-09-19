@@ -1,49 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-        <link rel="stylesheet" href="src/style/index.css">
 
-        <title>Quotazione EUR | USD | BRL</title>
-    </head>
-    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link rel="stylesheet" href="src/style/index.css">
+    <title>Quotazione EUR | USD | BRL</title>
+</head>
+
 <body>
-    
+
     <header class="head">
-        <h2>Quotazione tempo reale</h2>
+        <h2>Quotazione in tempo reale</h2>
         <p class="pEuro"></p>
         <p class="pDolar"></p>
     </header>
    
     <main class="container">
        
-        <div>
-                <input id="input1" type="number" placeholder="EUR">
+            <div>
+                <input id="input1" type="number" placeholder=" inseri valuta ">
                 
                 <select class="select1" name="" id="">
-                    <option value="real">Real</option>
-                    <option value="dolar">Dolar</option>
+                <option value="">Di:</option>
+                <option value="brl">BRL</option>
+                <option value="eur">EUR</option>
+                <option value="usd">USD</option>
                 </select>
+
+                <select class="select2" name="" id="">
+                    <option value="">Per:</option>
+                    <option value="eur">EUR</option>
+                    <option value="usd">USD</option>
+                    <option value="brl">BRL</option>
+                    </select>
             </div>
        
-            
+        
         <button id="btnSum" class="myButton">CONVERTERE!</button>
         
         
         <h2 id="h2final"></h2>
-        
+  
         
     </main>
     
-    <footer>Getulio |💕| Paola </footer>
+    <footer>💘P&G💘</footer>
 </body>
 
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script type="module" src="./src/script/main.js"></script>
-
-
+<script src="/node_modules/axios/dist/axios.min.js"></script>
+<script type="module" src="/src/script/main.js"></script>
 </html>
