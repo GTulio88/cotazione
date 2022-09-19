@@ -50,7 +50,7 @@ const getDolar = () => {
                if (sel.value === 'dolar') {
                    const hh = inp.value * data
                     console.log(inp.value)
-                   h2final.innerHTML = 'R$'+ hh
+                   h2final.innerHTML = 'R$'+ hh.toFixed(2)
                    console.log(h2final)// h2final.innerHTML = ''
                }
            }
