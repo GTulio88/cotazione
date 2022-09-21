@@ -1,0 +1,56 @@
+@font-face {
+  font-family: facetruque-light;
+  src: url(/fonts/Klavika/klavika-light.otf);
+}
+
+@font-face {
+  font-family: facetruque-light-italic;
+  src: url(/fonts/Klavika/klavika-light-italic.otf);
+
+}
+
+@font-face {
+  font-family: facetruque-bold;
+  src: url(/fonts/Klavika/klavika-bold.otf);
+
+}
+
+@font-face {
+  font-family: facetruque-bold-italic;
+
+  src: url(/fonts/Klavika/klavika-bold-italic.otf);
+}
+
+@font-face {
+  font-family: facetruque-medium;
+  src: url(/fonts/Klavika/klavika-medium.otf);
+
+}
+
+
+@font-face {
+  font-family: facetruque-medium-italic;
+  src: url(/fonts/Klavika/klavika-medium-italic.otf);
+
+}
+
+
+
+@font-face {
+  font-family: facetruque-regular-italic;
+  src: url(/fonts/Klavika/klavika-regular-italic.otf);
+
+}
+
+
+
+
+
+
+
+
+
+
+/* IMPORTAÇÃO DAS FONTES */
+ 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');

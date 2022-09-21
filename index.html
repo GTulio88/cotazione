@@ -1,61 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <link rel="stylesheet" href="src/style/index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="/src/assets/img/flag.svg" type="image/x-icon">
+<html lang="it-IT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style/index.css" />
     <title>Quotazione EUR | USD | BRL</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <header class="head">
-        <h2>QUOTAZIONE IN TEMPO REALE OGGI: </h2>
+      <h2>Quotazione:</h2>
+      <div class="divFlags">
         <p class="pEuro"></p>
+        <img
+          class="imgEuro"
+          src="/src/assets/img/Flag_of_Europe.svg.png"
+          alt=""
+        />
+      </div>
+      <div class="divFlags">
         <p class="pDolar"></p>
+        <img class="imgEuro" src="/src/assets/img/flagUSA.png" alt="" />
+      </div>
     </header>
 
     <main class="container">
+      <div>
+        <input id="input1" type="text" placeholder=" inseri valuta " />
 
-        <div>
-            <input id="input1" type="number" placeholder=" inseri valuta ">
+        <select class="select1" name="" id="">
+          <option value="">Da:</option>
+          <option value="brl">BRL</option>
+          <option value="eur">EUR</option>
+          <option value="usd">USD</option>
+        </select>
 
-            <select class="select1" name="" id="">
-                <option value="">Di:</option>
-                <option value="brl">BRL</option>
-                <option value="eur">EUR</option>
-                <option value="usd">USD</option>
-            </select>
+        <select class="select2" name="" id="">
+          <option value="">In:</option>
+          <option value="eur">EUR</option>
+          <option value="usd">USD</option>
+          <option value="brl">BRL</option>
+        </select>
+      </div>
 
-            <select class="select2" name="" id="">
-                <option value="">Per:</option>
-                <option value="eur">EUR</option>
-                <option value="usd">USD</option>
-                <option value="brl">BRL</option>
-            </select>
-        </div>
+      <button id="btnSum" class="myButton">CONVERTERE</button>
 
-
-        <button id="btnSum" class="myButton">CONVERTERE!</button>
-
-
-        <h2 id="h2final"></h2>
-
-
+      <h2 id="h2final"></h2>
     </main>
+    <div class="data-time">
+      <img class="flag-it" src="/src/assets/img/it.png" alt="" />
+      <p class="time-it"></p>
 
-    <footer>💘P&G💘</footer>
-</body>
+      <img class="flag-it" src="/src/assets/img/br.png" alt="" />
+      <p class="time-br"></p>
+      <br />
+    </div>
+    <footer>
+      <p>G💕P</p>
+    </footer>
+  </body>
 
-<script src="/node_modules/axios/dist/axios.min.js"></script>
-<script type="module" src="src/script/main.js"></script>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
+  <script src="/node_modules/axios/dist/axios.min.js"></script>
+  <script type="module" src="/src/script/main.js"></script>
 </html>
