@@ -97,7 +97,7 @@ let a = new Intl.DateTimeFormat("pt-BR", {
   second: "2-digit",
   hour24: "true",
   timeZone: "America/Sao_paulo",
-  timeZoneName: "long",
+  // timeZoneName: "long",
 }).format(br);
 
 let b = new Intl.DateTimeFormat("it-IT", {
@@ -110,7 +110,7 @@ let b = new Intl.DateTimeFormat("it-IT", {
   second: "2-digit",
   hour24: "true",
   timeZone: "Europe/Rome",
-  timeZoneName: "long",
+  // timeZoneName: "long",
 }).format(it);
 
 oreIt.innerText = b;

@@ -149,11 +149,12 @@ footer {
   font-size: 10px;
   text-align: -webkit-center;
   margin-bottom: -27px;
+  font-size: 14px;
 }
 
 .time-it {
   text-transform: capitalize;
-  font-size: 10px;
+  font-size: 14px;
   align-self: center;
   text-align: -webkit-center;
 }
@@ -165,4 +166,5 @@ footer {
 
 p {
   text-align: center;
+  /* font-size: 14px; */
 }
