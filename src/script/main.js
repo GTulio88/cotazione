@@ -83,50 +83,87 @@ const getDolar = () => {
     .catch((err) => console.log(err));
 };
 
-let oggi = "";
+let br = moment.tz("America/Sao_Paulo");
 
-const getOra = () => {
-  axios
-    .get(`http://worldclockapi.com/api/json/utc/now`)
-    .then((res) => {
-      let data = res.data.currentDateTime;
-      oggi = data;
+let it = moment.tz("Europe/Rome");
 
-      let today = new Date(oggi);
+let a = new Intl.DateTimeFormat("pt-BR", {
+  year: "numeric",
+  month: "long",
+  day: "2-digit",
+  weekday: "long",
+  hour: "2-digit",
+  minute: "2-digit",
+  second: "2-digit",
+  hour24: "true",
+  timeZone: "America/Sao_paulo",
+  timeZoneName: "long",
+}).format(br);
 
-      const newToday = new Intl.DateTimeFormat("pt-BR", {
-        year: "numeric",
-        month: "long",
-        day: "2-digit",
-        weekday: "long",
-        hour: "2-digit",
-        minute: "2-digit",
-        // second: "2-digit",
-        hour24: "true",
-        timeZone: "America/Sao_paulo",
-        timeZoneName: "long",
-      }).format(today);
-      console.log(newToday);
+let b = new Intl.DateTimeFormat("it-IT", {
+  year: "numeric",
+  month: "long",
+  day: "2-digit",
+  weekday: "long",
+  hour: "2-digit",
+  minute: "2-digit",
+  second: "2-digit",
+  hour24: "true",
+  timeZone: "Europe/Rome",
+  timeZoneName: "long",
+}).format(it);
 
-      oreBr.innerText = newToday;
+oreIt.innerText = b;
+oreBr.innerText = a;
 
-      const newToday2 = new Intl.DateTimeFormat("it-IT", {
-        year: "numeric",
-        month: "long",
-        day: "2-digit",
-        weekday: "long",
-        hour: "2-digit",
-        minute: "2-digit",
-        // second: "2-digit",
-        hour24: "true",
-        timeZone: "Europe/Rome",
-        timeZoneName: "long",
-      }).format(today);
-      oreIt.innerText = newToday2;
-      console.log(newToday2);
-    })
-    .catch((err) => console.log(err));
-};
+console.log(a);
+console.log(b);
+
+// let oggi = "";
+
+// const getOra = () => {
+//   axios
+//     .get(`http://worldclockapi.com/api/json/utc/now`)
+//     .then((res) => {
+//       let data = res.data.currentDateTime;
+//       oggi = data;
+//       console.log(data);
+//       console.log(oggi);
+//       let today = new Date(oggi);
+
+//       const newToday = new Intl.DateTimeFormat("pt-BR", {
+//         year: "numeric",
+//         month: "long",
+//         day: "2-digit",
+//         weekday: "long",
+//         hour: "2-digit",
+//         minute: "2-digit",
+//         // second: "2-digit",
+//         hour24: "true",
+//         timeZone: "America/Sao_paulo",
+//         timeZoneName: "long",
+//       }).format(today);
+//       console.log(newToday);
+
+//       oreBr.innerText = newToday;
+
+//       const newToday2 = new Intl.DateTimeFormat("it-IT", {
+//         year: "numeric",
+//         month: "long",
+//         day: "2-digit",
+//         weekday: "long",
+//         hour: "2-digit",
+//         minute: "2-digit",
+//         // second: "2-digit",
+//         hour24: "true",
+//         timeZone: "Europe/Rome",
+//         timeZoneName: "long",
+//       }).format(today);
+//       oreIt.innerText = newToday2;
+//       console.log(newToday2);
+//     })
+//     .catch((err) => console.log(err));
+// };
 
 // const date = new Date('2018-07-19T22:07:00.000-03:00')
 
@@ -137,7 +174,7 @@ const getOra = () => {
 // const formatted = `${day}/${month}/${year}`
 
 // console.log(formatted)
-getOra();
+// getOra();
 
 getDolar();
 

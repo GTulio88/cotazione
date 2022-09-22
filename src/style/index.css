@@ -121,8 +121,8 @@ footer {
 }
 
 .flag-it {
-  height: 14px;
-  width: 14px;
+  height: 13px;
+  width: 18px;
   align-self: center;
   margin-top: 32px;
 }
@@ -147,15 +147,22 @@ footer {
 .time-br {
   text-transform: capitalize;
   font-size: 10px;
+  text-align: -webkit-center;
+  margin-bottom: -27px;
 }
 
 .time-it {
   text-transform: capitalize;
   font-size: 10px;
   align-self: center;
+  text-align: -webkit-center;
 }
 
 footer {
   margin: 22px;
   margin-bottom: 30px;
+}
+
+p {
+  text-align: center;
 }
